@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Language Translator | CodingNepal</title>
+    <link rel="stylesheet" href="/static/text_translator.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preload" href="/static/live_translation.jpg" as="image">
+
+  </head>
+  <body>
+    <div class="main">
+
+      <!-- Navbar coding started -->
+
+    <nav>
+      <a href="#" style=
+      "margin-right: 47%; text-decoration: none; padding-left: 2%;
+       font-size: 32px; font-family: Calibri; font-weight: bold; font-style: italic; cursor: default;">PolyGlide</a>
+      <a href="http://127.0.0.1:5000/">Home</a>
+      <a href="http://127.0.0.1:5000/text">TextShift</a>
+      <a href="http://127.0.0.1:5000/live">TalkApp</a>
+      <a href="http://127.0.0.1:5000/craft">Caption-Craft</a>
+      <a href="http://127.0.0.1:5000/blendm">BlendMaster</a>
+      <a href="http://127.0.0.1:5000/AudioBook">AudioBook</a>
+      <div class="animation start-home"></div>
+    </nav>
+
+    <!-- Navbar Coding Ended -->
+
+      <div class ="container_parent">
+    <div class="container">
+      <h1>Text Translator</h1>
+      <div class="wrapper">
+        <div class="text-input">
+          <textarea spellcheck="false" class="from-text" placeholder="Enter text"></textarea>
+          <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Translation"></textarea>
+        </div>
+        <ul class="controls">
+          <li class="row from">
+            <div class="icons">
+              <i id="from" class="fas fa-volume-up"></i>
+              <i id="from" class="fas fa-copy"></i>
+            </div>
+            <select>
+            </select>
+          </li>
+          <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+          <li class="row to">
+            <select></select>
+            <div class="icons">
+              <i id="to" class="fas fa-volume-up"></i>
+              <i id="to" class="fas fa-copy"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button>Translate Text</button>
+    </div></div>
+  
+    <div class="end">
+      <p>© Copyright 2011-2021 www.google.com. All rights reserved. Developed by ...</p>
+    </div>
+  </div>
+
+    <script src="/static/text_translator_lang.js"></script>
+    <script src="/static/text_translator.js"></script>
+
+  </body>
+</html>

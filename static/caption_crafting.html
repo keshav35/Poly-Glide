@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caption Crafting</title>
+    <style>
+         @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        nav{
+            position: relative;
+            margin: 0;
+            width: 100%;
+            height: 65px;
+            background: #34495e;
+            border-radius: 2px;
+            font-size: 0;
+            box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+        }
+        nav a{
+            font-family: 'Open Sans',sans-serif;
+            font-size: 17px;
+            text-transform: uppercase;
+            color: white;
+            text-decoration: none;
+            line-height: 50px;
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            text-align: center;
+            padding: 1px;
+            padding-top: 5px;
+            padding-bottom: 0; 
+        }
+        nav .animation{
+            position: absolute;
+            height: 100%;
+            /* height: 5px; */
+            top: 0;
+            /* bottom: 0; */
+            z-index: 0;
+            background: #1abc9c;
+            border-radius: 8px;
+            transition: all .5s ease 0s;
+        }
+
+        nav a:nth-child(2){
+            width: 80px;
+        }
+        nav a:nth-child(2):hover~.animation{
+            width: 80px;
+            left: 1147px;
+        }
+        nav a:nth-child(3){
+            width: 130px;
+        }
+        nav a:nth-child(3):hover~.animation{
+            width: 110px;
+            left: 1238px;
+        }
+        nav a:nth-child(4){
+            width: 100px;
+        }
+        nav a:nth-child(4):hover~.animation{
+            width: 100px;
+            left: 1356px;
+        }
+        nav a:nth-child(5){
+            width: 170px;
+        }
+        nav a:nth-child(5):hover~.animation{
+            width: 160px;
+            left: 1462px;
+        }
+        nav a:nth-child(6){
+            width: 160px;
+        }
+        nav a:nth-child(6):hover~.animation{
+            width: 150px;
+            left: 1632px;
+        }
+        nav a:nth-child(7){
+            width: 120px;
+        }
+        nav a:nth-child(7):hover~.animation{
+            width: 120px;
+            left: 1788px;
+        }
+
+        Main {
+        display: block;
+        width: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('/static/caption_crafting2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100%;
+            margin: 0;
+            padding: 0;
+            display: block;
+            /* justify-content: center;
+            align-items: center; */
+            height: 100vh;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* A semi-transparent black overlay */
+            z-index: -1; /* Place behind other content */
+        }
+
+        .container_parent {
+        text-align: left;
+        justify-content: center;
+        background-size: 100%;
+        width: 100%;
+        display: flex;
+        margin-top: 4%;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 5px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            position: relative; 
+            z-index: 1; 
+            text-align: center;
+            width: 30%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        input[type="file"] {
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #video-player {
+            height: 400px;
+            width: 400px;
+            margin-top: 20px;
+            margin-left: 00%;
+        }
+
+        #download-link {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #download-link:hover {
+            background-color: #0056b3;
+        }
+
+        .end {
+	background-color: black;
+	width: 100%;
+	height: 60px;
+    bottom: 0;
+    position: fixed;
+    
+}
+.end p {
+	color: white;
+	font-size: 19px;
+	margin: 0;
+	padding-top: 1%;
+	padding-left: 36%;
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="main">
+
+        <!-- Navbar coding started -->
+
+    <nav>
+        <a href="#" style=
+        "margin-right: 47%; text-decoration: none; padding-left: 2%;
+         font-size: 32px; font-family: Calibri; font-weight: bold; font-style: italic; cursor: default;">PolyGlide</a>
+        <a href="http://127.0.0.1:5000/">Home</a>
+        <a href="http://127.0.0.1:5000/text">TextShift</a>
+        <a href="http://127.0.0.1:5000/live">TalkApp</a>
+        <a href="http://127.0.0.1:5000/craft">Caption-Craft</a>
+        <a href="http://127.0.0.1:5000/blendm">BlendMaster</a>
+        <a href="http://127.0.0.1:5000/AudioBook">AudioBook</a>
+        <div class="animation start-home"></div>
+      </nav>
+  
+      <!-- Navbar Coding Ended -->
+
+        <div class="container_parent">
+    <div class="container">
+        <h1>Caption Crafting</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="video-upload" accept="video/*">
+            <button type="button" id="submit-btn">Upload and Translate</button>
+        </form>
+        <video id="video-player" controls></video>
+        <a id="download-link" href="#" style="display:none;">Download Video with Subtitles</a>
+    </div></div>
+
+    <div class="end">
+        <p>© Copyright 2011-2021 www.google.com. All rights reserved. Developed by ...</p>
+      </div>
+</div>
+    <script>
+        document.getElementById('submit-btn').addEventListener('click', function() {
+    const video = document.getElementById('video-upload').files[0];
+    if (!video) {
+        alert('Please upload a video file.');
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('video', video);
+
+    fetch('/upload2', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            const videoPlayer = document.getElementById('video-player');
+            videoPlayer.src = data.video_url;
+            videoPlayer.style.display = 'block';
+
+            const downloadLink = document.getElementById('download-link');
+            downloadLink.href = data.download_url;
+            downloadLink.style.display = 'block';
+        } else {
+            alert('Failed to process the video.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred.');
+    });
+});
+
+    </script>
+</body>
+</html>

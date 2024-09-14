@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Merge</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        nav{
+            position: relative;
+            margin: 0;
+            width: 100%;
+            height: 65px;
+            background: #34495e;
+            border-radius: 2px;
+            font-size: 0;
+            box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+        }
+        nav a{
+            font-family: 'Open Sans',sans-serif;
+            font-size: 17px;
+            text-transform: uppercase;
+            color: white;
+            text-decoration: none;
+            line-height: 50px;
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            text-align: center;
+        padding: 1px;
+        padding-top: 5px;
+        padding-bottom: 0; 
+        }
+        nav .animation{
+            position: absolute;
+            height: 100%;
+            /* height: 5px; */
+            top: 0;
+            /* bottom: 0; */
+            z-index: 0;
+            background: #1abc9c;
+            border-radius: 8px;
+            transition: all .5s ease 0s;
+        }
+
+        nav a:nth-child(2){
+            width: 80px;
+        }
+        nav a:nth-child(2):hover~.animation{
+            width: 80px;
+            left: 1147px;
+        }
+        nav a:nth-child(3){
+            width: 130px;
+        }
+        nav a:nth-child(3):hover~.animation{
+            width: 110px;
+            left: 1238px;
+        }
+        nav a:nth-child(4){
+            width: 100px;
+        }
+        nav a:nth-child(4):hover~.animation{
+            width: 100px;
+            left: 1356px;
+        }
+        nav a:nth-child(5){
+            width: 170px;
+        }
+        nav a:nth-child(5):hover~.animation{
+            width: 160px;
+            left: 1462px;
+        }
+        nav a:nth-child(6){
+            width: 160px;
+        }
+        nav a:nth-child(6):hover~.animation{
+            width: 150px;
+            left: 1632px;
+        }
+        nav a:nth-child(7){
+            width: 120px;
+        }
+        nav a:nth-child(7):hover~.animation{
+            width: 120px;
+            left: 1788px;
+        }
+
+        Main {
+        display: block;
+        width: 100%;
+        }
+
+
+       body {
+    font-family: Arial, sans-serif;
+    background: url('/static/background_video_dub.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    display: block;
+    /* justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    margin: 0;
+}
+
+
+/* Optionally, add a slight overlay to make text more readable */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* A semi-transparent black overlay */
+    z-index: -1; /* Place behind other content */
+}
+
+.container_parent {
+  text-align: left;
+  justify-content: center;
+  background-size: 100%;
+  width: 100%;
+  display: flex;
+  margin-top: 4%;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure it sits above the overlay */
+    z-index: 1; /* Ensure it sits above the overlay */
+}
+
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 40px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1%;
+}
+
+button:hover {
+    background-color: #218838;
+}
+.video-container {
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    background-color: #ffffff; 
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.end {
+	background-color: black;
+	width: 100%;
+	height: 60px;
+    bottom: 0;
+    position: fixed;
+    
+}
+.end p {
+	color: white;
+	font-size: 19px;
+	margin: 0;
+	padding-top: 1%;
+	padding-left: 36%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <!-- Navbar coding started -->
+
+    <nav>
+        <a href="#" style=
+        "margin-right: 47%; text-decoration: none; padding-left: 2%;
+         font-size: 32px; font-family: Calibri; font-weight: bold; font-style: italic; cursor: default;">PolyGlide</a>
+        <a href="http://127.0.0.1:5000/">Home</a>
+        <a href="http://127.0.0.1:5000/text">TextShift</a>
+        <a href="http://127.0.0.1:5000/live">TalkApp</a>
+        <a href="http://127.0.0.1:5000/craft">Caption-Craft</a>
+        <a href="http://127.0.0.1:5000/blendm">BlendMaster</a>
+        <a href="http://127.0.0.1:5000/AudioBook">AudioBook</a>
+        <div class="animation start-home"></div>
+      </nav>
+  
+      <!-- Navbar Coding Ended -->
+
+    <div class="container_parent">    
+    <div class="container">
+        <h1>Media Merge</h1>
+        <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+            <label for="video">Select Video File:</label>
+            <input type="file" name="video" id="video" accept="video/*" required>
+
+            <label for="audio">Select Audio File:</label>
+            <input type="file" name="audio" id="audio" accept="audio/*" required>
+
+            <button type="submit">Combine</button>
+        </form>
+
+        <div id="result" class="video-container">
+            <h3 style="text-align: center; color: rgb(200, 200, 199);">result will be displayed here</h3>
+            <!-- The combined video will be displayed here -->
+        </div>
+    </div></div>
+    <div class="end">
+        <p>© Copyright 2011-2021 www.google.com. All rights reserved. Developed by ...</p>
+      </div>
+
+</div>
+    <script>
+        document.getElementById('upload-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    
+    fetch('/upload', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.blob())
+    .then(blob => {
+        const videoURL = URL.createObjectURL(blob);
+        const videoElement = document.createElement('video');
+        videoElement.src = videoURL;
+        videoElement.controls = true;
+        document.getElementById('result').appendChild(videoElement);
+    })
+    .catch(error => console.error('Error:', error));
+});
+
+    </script>
+</body>
+</html>

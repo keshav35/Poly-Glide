@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text File Translator and Speaker</title>
+    <style>
+        
+       body {
+        /* text-align: center; */
+    font-family: Arial, sans-serif;
+    background: url('/static/DMV.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    display: block;
+    /* justify-content: center; */
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Optionally, add a slight overlay to make text more readable */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* A semi-transparent black overlay */
+    z-index: -1; /* Place behind other content */
+}
+
+.container {
+    width: 28%;
+    height: 40%;
+    background-color: rgba(255, 255, 255, 0.87); /* Semi-transparent white for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure it sits above the overlay */
+    z-index: 1; /* Ensure it sits above the overlay */
+}
+.container_parent {
+            text-align: center;
+            justify-content: center;
+            background-size: 100%;
+            width: 100%;
+            display: flex;
+            margin-top: 12%;
+        }
+
+        input[type="file"] {
+            margin: 20px;
+        }
+
+        label {
+            margin-left: -15%;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            margin-left: 50%;
+            margin-top: 8%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        h1 {
+            font-size: 35px;
+            font-family: Arial;
+            font-style: italic;
+            font-weight: bold;
+            margin-bottom: 7%;
+        }
+        #languageSelect {
+            margin: 0;
+        }
+        nav{
+	position: relative;
+	margin: 0;
+	width: 100%;
+	height: 65px;
+	background: #34495e;
+	border-radius: 2px;
+	font-size: 0;
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+}
+nav a{
+	font-family: 'Open Sans',sans-serif;
+	font-size: 17px;
+	text-transform: uppercase;
+	color: white;
+	text-decoration: none;
+	line-height: 50px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+    padding: 6px;
+}
+nav .animation{
+	position: absolute;
+	height: 100%;
+	/* height: 5px; */
+	top: 0;
+	/* bottom: 0; */
+	z-index: 0;
+	background: #1abc9c;
+	border-radius: 8px;
+	transition: all .5s ease 0s;
+}
+
+nav a:nth-child(2){
+	width: 80px;
+}
+nav a:nth-child(2):hover~.animation{
+	width: 80px;
+	left: 1159px;
+}
+nav a:nth-child(3){
+	width: 110px;
+}
+nav a:nth-child(3):hover~.animation{
+	width: 110px;
+	left: 1249px;
+}
+nav a:nth-child(4){
+	width: 100px;
+}
+nav a:nth-child(4):hover~.animation{
+	width: 100px;
+	left: 1373px;
+}
+nav a:nth-child(5){
+	width: 140px;
+}
+nav a:nth-child(5):hover~.animation{
+	width: 140px;
+	left: 1484px;
+}
+nav a:nth-child(6){
+	width: 140px;
+}
+nav a:nth-child(6):hover~.animation{
+	width: 140px;
+	left: 1636px;
+}
+nav a:nth-child(7){
+	width: 120px;
+}
+nav a:nth-child(7):hover~.animation{
+	width: 120px;
+	left: 1788px;
+}
+.slide2 {
+	padding-top: 1%;
+	width: 95%;
+	justify-content: center;
+	align-items: center;
+}
+.slideshow {
+	margin-left: 5%;
+	border: 7px solid black;
+	border-radius: 1%;
+	background: url('/static/img1.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	height: 80vh;
+	justify-content: center;
+	align-items: center;
+	animation: slide;
+	animation-duration: 12s;
+	animation-delay: 3s;
+	animation-iteration-count: infinite;
+}
+@keyframes slide {
+	0% { opacity: 1; background: url('/static/img1.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 80vh;}
+	0% { opacity: 1; background: url('/static/img1.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 80vh;}
+	20% {opacity: 1; background: url('/static/img2.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 80vh;}
+	40% {opacity: 1; background: url('/static/img3.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 80vh;}
+	60% {opacity: 1; background: url('/static/img4.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 80vh;}
+	80% {opacity: 1; background: url('/static/img5.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 80vh;}
+	100% {opacity: 1; background: url('/static/img6.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 80vh;}
+}
+
+.end {
+	background-color: black;
+	width: 100%;
+	height: 60px;
+    bottom: 0;
+    position: fixed;
+    
+}
+.end p {
+	color: white;
+	font-size: 19px;
+	margin: 0;
+	padding-top: 1%;
+	padding-left: 36%;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <nav>
+            <a href="#" style=
+            "margin-right: 47%; text-decoration: none; padding-left: 2%;
+             font-size: 32px; font-family: Calibri; font-weight: bold; font-style: italic; cursor: default;">PolyGlide</a>
+            <a href="http://127.0.0.1:5000/">Home</a>
+            <a href="http://127.0.0.1:5000/text">TextShift</a>
+            <a href="http://127.0.0.1:5000/live">TalkApp</a>
+            <a href="http://127.0.0.1:5000/craft">Caption-Craft</a>
+            <a href="http://127.0.0.1:5000/blendm">BlendMaster</a>
+            <a href="http://127.0.0.1:5000/AudioBook">AudioBook</a>
+            <div class="animation start-home"></div>
+          </nav>
+          <div class="container_parent">
+    <div class="container">
+    <h1>Audiobook</h1>
+    <input type="file" id="fileInput" accept=".txt"><br>
+    
+    <label for="languageSelect">Translate to:</label>
+    <select id="languageSelect" disabled>
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="mr">Marathi</option>
+    </select>
+    
+    <br>
+    <button onclick="uploadFile()">Translate and Speak</button>
+</div></div>
+<div class="end">
+    <p>© Copyright 2011-2021 www.google.com. All rights reserved. Developed by ...</p>
+  </div>
+</div>
+    <script>
+        function uploadFile() {
+    const fileInput = document.getElementById('fileInput');
+    const file = fileInput.files[0];
+    const language = document.getElementById('languageSelect').value;
+
+
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const text = e.target.result;
+            sendTextToServer(text, language);
+        };
+        reader.readAsText(file);
+    } else {
+        alert("Please select a file first.");
+    }
+}
+
+function sendTextToServer(text, language) {
+    fetch('/translate', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ text: text, lang: language }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.translatedText) {
+            speakText(data.translatedText, language);
+        } else {
+            alert("Translation failed.");
+        }
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
+
+function speakText(text, language) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    if (language === 'hi') {
+        utterance.lang = 'hi-IN';
+    } else if (language === 'mr') {
+        utterance.lang = 'mr-IN';
+    } else {
+        utterance.lang = 'en-IN';
+    }
+    window.speechSynthesis.speak(utterance);
+}
+    </script>
+</body>
+</html>

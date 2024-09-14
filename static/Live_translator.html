@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/Live_translator.css" />
+    <title>Speech to Text</title>
+  </head>
+  <body>
+    <div class="Main">
+    <!-- Navbar coding started -->
+
+    <nav>
+      <a href="#" style=
+      "margin-right: 47%; text-decoration: none; padding-left: 2%;
+       font-size: 32px; font-family: Calibri; font-weight: bold; font-style: italic; cursor: default;">PolyGlide</a>
+      <a href="http://127.0.0.1:5000/">Home</a>
+      <a href="http://127.0.0.1:5000/text">TextShift</a>
+      <a href="http://127.0.0.1:5000/live">TalkApp</a>
+      <a href="http://127.0.0.1:5000/craft">Caption-Craft</a>
+      <a href="http://127.0.0.1:5000/blendm">BlendMaster</a>
+      <a href="http://127.0.0.1:5000/AudioBook">AudioBook</a>
+      <div class="animation start-home"></div>
+    </nav>
+
+    <!-- Navbar Coding Ended -->
+     <div class="container_parent">
+    <div class="container">
+      <h1 style="font-style: italic; align-items: center; text-align: center;">Live Translation</h1>
+      <div class="options">
+        <div class="anguage">
+          <p>Language</p>
+          <select name="input-language" id="language"></select>
+        </div>
+      </div>
+      <div class="line"></div>
+      <button class="btn record">
+        <div class="icon">
+          <ion-icon name="mic-outline"></ion-icon>
+          <img src="/static/bars.svg" alt="" />
+        </div>
+        <p>Start Listening</p>
+      </button>
+      <p class="heading">Result :</p>
+      <div
+        class="result"
+        spellcheck="true"
+        placeholder="Text will be shown here"
+        style="justify-content: left; overflow-y: auto;"
+      >
+        <p class="interim"></p>
+      </div>
+      <div class="buttons">
+        <button class="btn clear">
+          <ion-icon name="trash-outline"></ion-icon>
+          <p>Clear</p>
+        </button>
+        <button class="btn download" disabled>
+          <ion-icon name="cloud-download-outline"></ion-icon>
+          <p>Download</p>
+        </button>
+      </div>
+    </div></div>
+
+    <div class="end">
+      <p>© Copyright 2011-2021 www.google.com. All rights reserved. Developed by ...</p>
+    </div>
+
+  </div>
+    <!-- IONICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- LANGUAGES -->
+    <script src="/static/languages.js"></script>
+
+    <!-- SCRIPT -->
+    <script src="/static/Live_translator.js"></script>
+  </body>
+</html>
