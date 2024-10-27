@@ -12,7 +12,7 @@ from spellchecker import SpellChecker
 os.environ['IMAGEMAGICK_BINARY'] = r'C:\Program Files\ImageMagick-7.1.1-Q16-HDRI\magick.exe'  # Adjust this path accordingly
 
 app = Flask(__name__)
-
+#This file is edited by Keshav Gadhari, suraj gaikar, aditi kadam, swarangi jog
 db_config = {
     'host': 'localhost',       # Your MySQL host
     'user': 'root',            # Your MySQL username
